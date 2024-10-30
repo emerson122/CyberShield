@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield - Protege tu Mundo Digital</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-dark: #0a192f;
+            --secondary-dark: #112240;
+            --accent-blue: #64ffda;
+            --text-primary: #e6f1ff;
+            --text-secondary: #8892b0;
+        }
+
+        body {
+            background-color: var(--primary-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background-color: var(--secondary-dark);
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('/api/placeholder/1920/1080') center/cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-blue);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: transparent;
+            border: 2px solid var(--accent-blue);
+            color: var(--accent-blue);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .features {
+            padding: 5rem 5%;
+            background-color: var(--secondary-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background-color: var(--primary-dark);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        .stats {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-card {
+            background-color: var(--secondary-dark);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section {
+            padding: 5rem 5%;
+            text-align: center;
+            background-color: var(--secondary-dark);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--accent-blue);
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            padding: 2rem 5%;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .features-grid, .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🛡️  CyberShield</div>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#caracteristicas">Características</a>
+            <a href="#estadisticas">Estadísticas</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Protege tu Presencia Digital</h1>
+            <p>En un mundo cada vez más conectado, tu seguridad en línea es nuestra prioridad. Descubre cómo protegerte contra las amenazas cibernéticas más recientes.</p>
+            <a href="#contacto" class="cta-button">Aprende Más</a>
+        </div>
+    </section>
+
+    <section class="features" id="caracteristicas">
+        <h2 class="section-title">Amenazas Principales</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-lock feature-icon"></i>
+                <h3>Phishing</h3>
+                <p>Aprende a identificar y evitar intentos de phishing que buscan robar tu información personal.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3>Malware</h3>
+                <p>🔒Protégete contra software malicioso que puede comprometer tus dispositivos y datos.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-user-secret feature-icon"></i>
+                <h3>Ingeniería Social</h3>
+                <p>Conoce las tácticas que los ciberdelincuentes usan para manipular a sus víctimas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats" id="estadisticas">
+        <h2 class="section-title">Estadísticas de Ciberataques</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">60%</div>
+                <p>de las empresas han sufrido ciberataques</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">90%</div>
+                <p>de los ataques comienzan con phishing</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">$6M</div>
+                <p>costo promedio por violación de datos</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section" id="contacto">
+        <h2 class="section-title">¿Listo para protegerte?</h2>
+        <p>Únete a nuestra comunidad y mantente informado sobre las últimas amenazas y mejores prácticas en ciberseguridad.</p>
+        <br>
+        <a href="#" class="cta-button">Comenzar Ahora</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CyberShield. merson122.</p>
+    </footer>
+</body>
+</html>
